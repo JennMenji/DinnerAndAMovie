@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Dinner and a Movie</title>
+</head>
+
+
+<body>
+
+
+    <!-- Header -->
+    <header class="hero">
+
+        <div class="col-12 col-md-4">
+            <h1>Dinner and a Movie</h1>
+        </div>
+
+        <div class="col-12 col-md-8">
+            <p>...sounds great, until you can't decide on what!</p>
+            </break>
+            <p>Never stress again. Our random dinner and a movie generator will tell you what you're watching and eating tonight.</p>
+            </break>
+            <p>If you have an idea what you'd like, just search the type of food or pick a movie genre. We'll find something that fits your tastes.</p>
+            </break>
+            <p>If you're totally lost, we'll get you started!</p>
+        </div>
+
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Main Content -->
+    <main>
+
+        <section class="container" id="dinner">
+
+            <div class="col-12 col-md-5">
+                <div class="card">
+                    <h3 class="card-header">Search by Food</h3>
+                    <form id="food-form" class="card-body">
+                      <label class="form-label" for="food"></label> <!-- Label left empty for now, can change if we think of something good -->
+                      <input placeholder="Or leave it blank!" name="food" id="food" type="text" autofocus="true" class="form-input" />
+                      <button type="submit" class="btn" id="food-btn">Search</button>
+                    </form>
+                  </div>
+            </div>
+
+            <div class="col-12 col-md-7">
+                <div class="thumbnail text-center">
+                    <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
+                    <a>
+                        <picture>
+                            <!-- <img> tag used here to append image fetched by API -->
+                        </picture>
+                        <div class="caption">
+                            <!-- <p> tag used here to append title fetched by API -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section class="container" id="movie">
+
+    
+        <section>
+
+            <div class="col-12 col-md-5">
+                <div class="form-group">
+                    <h3 class="card-header">Select a Genre (Optional)</h3>
+                    <label for="genres"></label> <!-- Label left empty for now, can change if we think of something good -->
+                    <select name="genres" class="form-control" id="genres-form" multiple="">
+                        <!-- Values may need to be adjusted based on how they are stored in API -->
+                        <!-- Leaving Values as is for now -->
+                        <option value="28">Action</option>
+                        <option value="12">Adventure</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="10402">Music</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Fiction</option>
+                        <option value="53">Thriller</option>
+                        <option value="10770">TV Movie</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                    <button type="submit" class="btn" id="movie-btn">Search</button>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-7">
+                <div class="thumbnail text-center">
+                    <!-- If possible, try to append movie poster and title to the <a> element, this way it can be linked to the actual IMDB page -->
+                    <a>
+                        <picture>
+                            <!-- <img> tag used here to append movie poster fetched by API -->
+                        </picture>
+                        <div class="caption">
+                            <!-- <p> tag used here to append title fetched by API -->
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+    <!-- End Main Content -->
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>&copy 2021 The Winning Team</h3>
+    </footer>
+    <!-- End Footer -->
+
+
+</body>
+
+
+</html>
