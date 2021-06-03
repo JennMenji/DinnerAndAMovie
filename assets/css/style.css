@@ -1,0 +1,19 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Limelight", cursive;
+  font-size: 90px;
+}
+
+.material-icons {
+  font-size: 135px;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
