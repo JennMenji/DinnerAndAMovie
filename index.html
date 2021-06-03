@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Dinner and a Movie</title>
 </head>
@@ -13,20 +15,22 @@
 
 
     <!-- Header -->
-    <header class="hero">
+    <header class="hero container">
 
-        <div class="col-12 col-md-4">
-            <h1>Dinner and a Movie</h1>
-        </div>
-
-        <div class="col-12 col-md-8">
-            <p>...sounds great, until you can't decide on what!</p>
-            </break>
-            <p>Never stress again. Our random dinner and a movie generator will tell you what you're watching and eating tonight.</p>
-            </break>
-            <p>If you have an idea what you'd like, just search the type of food or pick a movie genre. We'll find something that fits your tastes.</p>
-            </break>
-            <p>If you're totally lost, we'll get you started!</p>
+        <div class="row">
+            <div class="col-12 col-md-4 ">
+                <h1>Dinner and a Movie</h1>
+            </div>
+    
+            <div class="col-12 col-md-8">
+                <p>...sounds great, until you can't decide on what!</p>
+                </break>
+                <p>Never stress again. Our random dinner and a movie generator will tell you what you're watching and eating tonight.</p>
+                </break>
+                <p>If you have an idea what you'd like, just search the type of food or pick a movie genre. We'll find something that fits your tastes.</p>
+                </break>
+                <p>If you're totally lost, we'll get you started!</p>
+            </div>
         </div>
 
     </header>
@@ -37,32 +41,32 @@
     <main>
 
         <section class="container" id="dinner">
-
-            <div class="col-12 col-md-5">
-                <div class="card">
-                    <h3 class="card-header">Search by Food</h3>
-                    <form id="food-form" class="card-body">
-                      <label class="form-label" for="food"></label> <!-- Label left empty for now, can change if we think of something good -->
-                      <input placeholder="Or leave it blank!" name="food" id="food" type="text" autofocus="true" class="form-input" />
-                      <button type="submit" class="btn" id="food-btn">Search</button>
-                    </form>
-                  </div>
-            </div>
-
-            <div class="col-12 col-md-7">
-                <div class="thumbnail text-center">
-                    <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
-                    <a>
-                        <picture>
-                            <!-- <img> tag used here to append image fetched by API -->
-                        </picture>
-                        <div class="caption">
-                            <!-- <p> tag used here to append title fetched by API -->
-                        </div>
-                    </a>
+            <div class="row">
+                <div class="col s6 m6 l6 xl6">
+                    <div class="card">
+                        <h3 class="card-header">Search by Food</h3>
+                        <form id="food-form" class="card-body">
+                        <label class="form-label" for="food"></label> <!-- Label left empty for now, can change if we think of something good -->
+                        <input placeholder="Or leave it blank!" name="food" id="food" type="text" autofocus="true" class="form-input" />
+                        <button type="submit" class="btn" id="food-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-7">
+                    <div class="thumbnail text-center">
+                        <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
+                        <a>
+                            <picture>
+                                <!-- <img> tag used here to append image fetched by API -->
+                            </picture>
+                            <div class="caption">
+                                <!-- <p> tag used here to append title fetched by API -->
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-
         </section class="container" id="movie">
 
     
