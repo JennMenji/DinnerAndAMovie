@@ -1,29 +1,35 @@
-var recipeUrl = 'https://api.spoonacular.com/recipes/random?apiKey=f999bb7189a34392a1a531b4ec949828';
+var recipeUrl =
+  "https://api.spoonacular.com/recipes/random?apiKey=f999bb7189a34392a1a531b4ec949828";
 
-var getMovieGenres = function() {
-    var apiUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US";
+var getMovieGenres = function () {
+  var apiUrl =
+    "https://api.themoviedb.org/3/genre/movie/list?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US";
 
-    fetch(apiUrl)
-    .then(function(response) {
-        if (response.ok) {
-            response.json();
-        }
+  fetch(apiUrl)
+    .then(function (response) {
+      if (response.ok) {
+        response.json();
+      }
     })
-    .then(function(data) {
-        console.log(data);
-    })
-}
+    .then(function (data) {
+      console.log(data);
+    });
+};
 
 getMovieGenres();
 
 // 4a2daec3e9790c72eaaf5273d699af37
 
-$("#food-form").submit(function( event ) {
-    findRecipe();
-    event.preventDefault();
-    });
-function findRecipe () {
-    fetch(recipeUrl)
-    .then(response => response.json())
-    .then(data => console.log(data));
+$("#food-form").submit(function (event) {
+  findRecipe();
+  event.preventDefault();
+});
+function findRecipe() {
+  fetch(recipeUrl)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
 }
+
+$(document).ready(function () {
+  $("select").formSelect();
+});

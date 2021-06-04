@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     
-                    <div class="col">
+                    <div class="col s12 m6">
                         <div class="thumbnail text-center">
                             <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
                             <a>
@@ -90,42 +90,43 @@
                             <span class="material-icons">movie_filter</span>
                         </div>
                         <div class="card-title">
-                            <h3>Select a Genre (Optional)</h3>
+                            <h3>Select a Genre</h3>
                         </div>
                         <div class="card-action">
-                            <div class="form-group input-field">
-                                <label for="genres"></label> <!-- Label left empty for now, can change if we think of something good -->
-                                <select name="genres" class="multiple" id="genres-form" multiple>
-                                    <!-- Values may need to be adjusted based on how they are stored in API -->
-                                    <!-- Leaving Values as is for now -->
-                                    <option value="" disabled selected>Choose your Genre</option>
-                                    <option value="28">Action</option>
-                                    <option value="12">Adventure</option>
-                                    <option value="16">Animation</option>
-                                    <option value="35">Comedy</option>
-                                    <option value="80">Crime</option>
-                                    <option value="18">Drama</option>
-                                    <option value="10751">Family</option>
-                                    <option value="14">Fantasy</option>
-                                    <option value="36">History</option>
-                                    <option value="27">Horror</option>
-                                    <option value="10402">Music</option>
-                                    <option value="9648">Mystery</option>
-                                    <option value="10749">Romance</option>
-                                    <option value="878">Science Fiction</option>
-                                    <option value="53">Thriller</option>
-                                    <option value="10770">TV Movie</option>
-                                    <option value="10752">War</option>
-                                    <option value="37">Western</option>
-                                </select>
-                                <button type="submit" class="btn" id="movie-btn">Search</button>
-                            </div>
+                            <form class="movie-form">
+                                <div class="form-group input-field">
+                                    <label class="active" for="genres">Select your Genre(s)</label> <!-- Label left empty for now, can change if we think of something good -->
+                                    <select name="genres" class="genre-options" id="genres-form" multiple>
+                                        <!-- Values may need to be adjusted based on how they are stored in API -->
+                                        <!-- Leaving Values as is for now -->
+                                        <option value="28">Action</option>
+                                        <option value="12">Adventure</option>
+                                        <option value="16">Animation</option>
+                                        <option value="35">Comedy</option>
+                                        <option value="80">Crime</option>
+                                        <option value="18">Drama</option>
+                                        <option value="10751">Family</option>
+                                        <option value="14">Fantasy</option>
+                                        <option value="36">History</option>
+                                        <option value="27">Horror</option>
+                                        <option value="10402">Music</option>
+                                        <option value="9648">Mystery</option>
+                                        <option value="10749">Romance</option>
+                                        <option value="878">Science Fiction</option>
+                                        <option value="53">Thriller</option>
+                                        <option value="10770">TV Movie</option>
+                                        <option value="10752">War</option>
+                                        <option value="37">Western</option>
+                                    </select>
+                                    <button type="submit" class="btn" id="movie-btn">Search</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="col">
+            <div class="col s12 m6">
                 <div class="thumbnail text-center">
                     <!-- If possible, try to append movie poster and title to the <a> element, this way it can be linked to the actual IMDB page -->
                     <a>
@@ -155,6 +156,7 @@
     </footer>
     <!-- End Footer -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
