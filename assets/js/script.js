@@ -22,8 +22,20 @@ $("#food-form").submit(function( event ) {
     findRecipe();
     event.preventDefault();
     });
+
 function findRecipe () {
     fetch(recipeUrl)
-    .then(response => response.json())
-    .then(data => console.log(data));
+    .then (function (response) {
+        return response.json()
+    })
+    .then (function (data) {
+        getRecipeImg(data.recipes[0].id)
+    })
 }
+function getRecipeImg (num) {
+    var recipeImgUrl = "https://spoonacular.com/recipeImages/"+ num +"-480x360.jpg";
+    var imgTag = $("<img>").attr("src", recipeImgUrl)
+    $("#food-pic").append(imgTag)
+}
+
+
