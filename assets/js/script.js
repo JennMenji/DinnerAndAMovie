@@ -1,3 +1,5 @@
+var recipeUrl = 'https://api.spoonacular.com/recipes/random?apiKey=f999bb7189a34392a1a531b4ec949828';
+
 var getMovieGenres = function() {
     var apiUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US";
 
