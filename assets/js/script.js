@@ -15,3 +15,13 @@ var getMovieGenres = function() {
 getMovieGenres();
 
 // 4a2daec3e9790c72eaaf5273d699af37
+
+$("#food-form").submit(function( event ) {
+    findRecipe();
+    event.preventDefault();
+    });
+function findRecipe () {
+    fetch(recipeUrl)
+    .then(response => response.json())
+    .then(data => console.log(data));
+}
