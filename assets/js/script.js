@@ -30,7 +30,12 @@ $("#food-form").submit(function( event ) {
     });
 
 function findRecipe () {
-    fetch(recipeUrl)
+  console.log($("#food").val())
+    var tempUrl = recipeUrl;
+    if ($("#food").text !=""){
+        tempUrl = tempUrl + "&number=1&tags=" + $("#food").val();
+    }
+    fetch(tempUrl)
     .then (function (response) {
         return response.json()
     })
@@ -38,6 +43,7 @@ function findRecipe () {
         getRecipeImg(data.recipes[0].id)
     })
 }
+
 function getRecipeImg (num) {
     var recipeImgUrl = "https://spoonacular.com/recipeImages/"+ num +"-480x360.jpg";
     var imgTag = $("<img>").attr("src", recipeImgUrl)
