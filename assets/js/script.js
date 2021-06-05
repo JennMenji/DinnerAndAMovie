@@ -1,18 +1,24 @@
-var recipeUrl = 'https://api.spoonacular.com/recipes/random?apiKey=f999bb7189a34392a1a531b4ec949828';
+$(document).ready(function () {
+  $("select").formSelect();
+});
 
-var getMovieGenres = function() {
-    var apiUrl = "https://api.themoviedb.org/3/genre/movie/list?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US";
+var recipeUrl =
+  "https://api.spoonacular.com/recipes/random?apiKey=f999bb7189a34392a1a531b4ec949828";
 
-    fetch(apiUrl)
-    .then(function(response) {
-        if (response.ok) {
-            response.json();
-        }
+var getMovieGenres = function () {
+  var apiUrl =
+    "https://api.themoviedb.org/3/genre/movie/list?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US";
+
+  fetch(apiUrl)
+    .then(function (response) {
+      if (response.ok) {
+        response.json();
+      }
     })
-    .then(function(data) {
-        console.log(data);
-    })
-}
+    .then(function (data) {
+      console.log(data);
+    });
+};
 
 getMovieGenres();
 
@@ -37,5 +43,3 @@ function getRecipeImg (num) {
     var imgTag = $("<img>").attr("src", recipeImgUrl)
     $("#food-pic").append(imgTag)
 }
-
-
