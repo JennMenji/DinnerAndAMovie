@@ -17,3 +17,13 @@ h1 {
 .card-title {
   text-align: center;
 }
+
+.tmdb-logo {
+  width: 70%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
