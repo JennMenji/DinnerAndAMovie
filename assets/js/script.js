@@ -61,7 +61,6 @@ $("#food-form").submit(function (event) {
 });
 
 function findRecipe() {
-  console.log($("#food").val());
   var tempUrl = recipeUrl;
   if ($("#food").text != "") {
     tempUrl = tempUrl + "&number=1&tags=" + $("#food").val();
@@ -72,12 +71,20 @@ function findRecipe() {
     })
     .then(function (data) {
       getRecipeImg(data.recipes[0].id);
+      displayRecipeName(data.recipes[0].title);
     });
 }
 
 function getRecipeImg(num) {
+  $("#food-pic").html("");
   var recipeImgUrl =
     "https://spoonacular.com/recipeImages/" + num + "-480x360.jpg";
   var imgTag = $("<img>").attr("src", recipeImgUrl);
   $("#food-pic").append(imgTag);
+}
+
+function displayRecipeName (name) {
+  $("#recipe-name").html("");
+  var recipeName = $("<p>").text(name);
+  $("#recipe-name").append(recipeName);
 }
