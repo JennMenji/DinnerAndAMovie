@@ -1,3 +1,5 @@
+var movieTitleEl = document.querySelector('#movie-title');
+
 $(document).ready(function () {
   $("select").formSelect();
 });
@@ -46,12 +48,30 @@ var movieByGenre = function (genreIds) {
       return response.json();
     })
     .then(function (data) {
+      console.log(data)
       // to retrieve a random movie from the selected genre(s)
       var randomMovie =
         data.results[Math.floor(Math.random() * data.results.length)];
-      console.log(randomMovie.title);
+      
+      displayMovieTitle(randomMovie.title)
+      displayMovieImage(randomMovie.poster_path)
     });
 };
+
+function displayMovieTitle(title) {
+
+  $("#movie-title").html("");
+  var movieTitle = $("<p>").text(title);
+  $("#movie-title").append(movieTitle);
+}
+
+function displayMovieImage(img) {
+  $("#movie-poster").html("");
+  var moviePosterUrl = "https://image.tmdb.org/t/p/original/" + img
+  console.log(moviePosterUrl)
+  var movieTag = $("<img>").attr("src", moviePosterUrl)
+  $("#movie-poster").append(movieTag);
+}
 
 // 4a2daec3e9790c72eaaf5273d699af37
 
