@@ -38,50 +38,11 @@
         </div>
     </header>
     <!-- End Header -->
-
-
+    
+    
     <!-- Main Content -->
     <main>
 
-        <section class="container" id="dinner">
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card medium">
-                        <div class="card-image">
-                            <span class="material-icons">restaurant_menu</span>
-                        </div>
-                        <div class="card-title">
-                            <h3>Search by Food</h3>
-                        </div>
-                        <div class="card-action">
-                            <form id="food-form">
-                                <div class="input-field">
-                                    <label class="active" for="food"></label> <!-- Label left empty for now, can change if we think of something good -->
-                                    <input placeholder="Or leave it blank!" name="food" id="food" type="text" autofocus="true" class="form-input" />
-                                    <button type="submit" class="btn" id="food-btn">Search</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                    <div class="col s12 m6">
-                        <div class="thumbnail text-center">
-                            <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
-                            <a>
-                                <picture id="food-pic">
-                                    <!-- <img> tag used here to append image fetched by API -->
-                                </picture>
-                                <div class="caption" id="recipe-name">
-                                    <!-- <p> tag used here to append title fetched by API -->
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    
         <section class="container" id="movie">
             <div class="row">
                 <div class="col s12 m6">
@@ -138,6 +99,44 @@
                             <!-- <p> tag used here to append title fetched by API -->
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="dinner">
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card medium">
+                        <div class="card-image">
+                            <span class="material-icons">restaurant_menu</span>
+                        </div>
+                        <div class="card-title">
+                            <h3>Search by Food</h3>
+                        </div>
+                        <div class="card-action">
+                            <form id="food-form">
+                                <div class="input-field">
+                                    <label class="active" for="food"></label> <!-- Label left empty for now, can change if we think of something good -->
+                                    <input placeholder="Or leave it blank!" name="food" id="food" type="text" autofocus="true" class="form-input" />
+                                    <button type="submit" class="btn" id="food-btn">Search</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="col s12 m6">
+                        <div class="thumbnail text-center">
+                            <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
+                            <a>
+                                <picture id="food-pic">
+                                    <!-- <img> tag used here to append image fetched by API -->
+                                </picture>
+                                <div class="caption" id="recipe-name">
+                                    <!-- <p> tag used here to append title fetched by API -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
