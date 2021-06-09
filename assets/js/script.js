@@ -23,10 +23,35 @@ var getMovieGenres = function () {
     });
 };
 
-$("#genres-form").submit(function (event) {
-  getMovieGenres();
+// to retrieve an array of the selected genres from the user
+$("#movie-form").submit(function (event) {
+  var selectedGenres = $("#genres-form").val();
+  movieByGenre(selectedGenres);
   event.preventDefault();
 });
+
+// function to get movie by user selected genre
+var movieByGenre = function (genreIds) {
+  // to make selected genre array into a string
+  var genresString = genreIds.toString();
+  // console.log(genresString);
+
+  // API URL to discover movie list by genre
+  var discoverApiUrl =
+    "https://api.themoviedb.org/3/discover/movie?api_key=4a2daec3e9790c72eaaf5273d699af37&language=en-US&with_genres=" +
+    genresString;
+
+  fetch(discoverApiUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // to retrieve a random movie from the selected genre(s)
+      var randomMovie =
+        data.results[Math.floor(Math.random() * data.results.length)];
+      console.log(randomMovie.title);
+    });
+};
 
 // 4a2daec3e9790c72eaaf5273d699af37
 
