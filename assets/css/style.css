@@ -23,7 +23,32 @@ h1 {
   height: auto;
 }
 
+img {
+  width: 350px;
+  height: 350px;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  img {
+    width: 250px;
+    height: 250px;
+    
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  footer h3 {
+    font-size: 24px;
+  }
 }
