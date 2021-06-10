@@ -28,6 +28,12 @@ img {
   height: 350px;
 }
 
+.card .card-image img {
+  height: 275px;
+  width: auto;
+  margin: auto;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
