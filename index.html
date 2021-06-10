@@ -45,7 +45,7 @@
 
         <section class="container" id="movie">
             <div class="row">
-                <div class="col s12 m6">
+                <div id="select-movie" class="col s12 m6">
                     <div class="card medium">
                         <div class="card-image">
                             <span class="material-icons">movie_filter</span>
@@ -86,20 +86,23 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col s12 m6">
-                <div class="thumbnail text-center">
-                    <!-- If possible, try to append movie poster and title to the <a> element, this way it can be linked to the actual IMDB page -->
-                    <a>
                 
-                        <picture id="movie-poster">
-                            <!-- <img> tag used here to append movie poster fetched by API -->
-                        </picture>
-                        <div class="caption" id="movie-title">
-                            <!-- <p> tag used here to append title fetched by API -->
+                <div id="display-movie" class="col s12 m6">
+                    <div class="card medium">
+                        <div class="thumbnail text-center">
+                            <!-- If possible, try to append movie poster and title to the <a> element, this way it can be linked to the actual IMDB page -->
+                                <a>
+                                    <div class="card-image">
+                                        <picture id="movie-poster">
+                                            <!-- <img> tag used here to append movie poster fetched by API -->
+                                        </picture>
+                                    </div>
+                                    <div class="caption card-content" id="movie-title">
+                                        <!-- <p> tag used here to append title fetched by API -->
+                                    </div>
+                                </a>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -124,15 +127,18 @@
                             </form>
                         </div>
                     </div>
-                    
-                    <div class="col s12 m6">
+                </div>
+                <div class="col s12 m6">
+                    <div class="card medium">
                         <div class="thumbnail text-center">
                             <!-- If possible, try to append image of food and title to the <a> element, this way it can be linked to the recipe page -->
                             <a>
-                                <picture id="food-pic">
-                                    <!-- <img> tag used here to append image fetched by API -->
-                                </picture>
-                                <div class="caption" id="recipe-name">
+                                <div class="card-image">
+                                    <picture id="food-pic">
+                                        <!-- <img> tag used here to append image fetched by API -->
+                                    </picture>
+                                </div>
+                                <div class="caption card-title" id="recipe-name">
                                     <!-- <p> tag used here to append title fetched by API -->
                                 </div>
                             </a>
